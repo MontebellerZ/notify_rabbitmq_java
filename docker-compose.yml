@@ -1,0 +1,19 @@
+version: '3'
+services:
+  notify_rabbitmq:
+    build:
+      context: ./notify_rabbitmq
+    depends_on:
+      - rabbitmq
+  notify_rabbitmq2:
+    build:
+      context: ./notify_rabbitmq2
+    depends_on:
+      - rabbitmq
+  notify_rabbitmq3:
+    build:
+      context: ./notify_rabbitmq3
+    depends_on:
+      - rabbitmq
+  rabbitmq:
+    image: rabbitmq:latest
